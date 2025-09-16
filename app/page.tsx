@@ -1,9 +1,7 @@
-
 import React from 'react';
 import Link from 'next/link'
 export default function Home() {
   return (
-         
    <>
    <h1>Pagina de inicio</h1>
    <article><p>Bienvenido estimado visitante, estas es una pagina muy basica de HTML, </p></article>
