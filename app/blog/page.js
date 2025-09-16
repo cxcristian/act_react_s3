@@ -1,1 +1,0 @@
-import Link from 'next/link'; export default function BlogPage(){ return (<section><h1>Blog</h1><ol><li><Link href='/blog/articulo1'>Artículo 1</Link></li><li><Link href='/blog/articulo2'>Artículo 2</Link></li><li><Link href='/blog/articulo3'>Artículo 3</Link></li></ol></section> ) }
