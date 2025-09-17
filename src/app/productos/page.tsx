@@ -1,23 +1,24 @@
-import Link from 'next/link'
+import Link from "next/link"
+
 export default function ProductosPage() {
+  const productos = [
+    { id: "1", nombre: "Producto 1" },
+    { id: "2", nombre: "Producto 2" },
+    { id: "3", nombre: "Producto 3" },
+  ]
+
   return (
-    <>
-  <h1>Página de Productos</h1>
-  <h2>PRODUCTOS</h2>
-     <section>
-      <h1>Productos</h1>
-      <ol>
-        <li>
-          <Link href="/productos/laptop">Laptop</Link>
-        </li>
-        <li>
-          <Link href="/productos/smartphone">Smartphone</Link>
-        </li>
-        <li>
-          <Link href="/productos/tablet">Tablet</Link>
-        </li>
-      </ol>
-    </section>
-  </>)
-  
+    <div>
+      <h1>Lista de Productos</h1>
+      <ul>
+        {productos.map((p) => (
+          <li key={p.id}>
+            <Link href={`/productos/${p.id}`}>
+              {p.nombre}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
 }
