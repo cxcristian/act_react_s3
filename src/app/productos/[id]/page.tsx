@@ -1,5 +1,11 @@
-export default function ProductoPage({ params }) {
-  const { id } = params
+interface ProductoPageProps {
+  params: {
+    id: string;
+  };
+}
+
+export default function ProductoPage({ params }: ProductoPageProps) {
+  const { id } = params;
 
   return (
     <div>
@@ -8,5 +14,5 @@ export default function ProductoPage({ params }) {
       <p>Descripcion: producto descriptivo</p>
       <a href="/productos">Volver a la lista de productos</a>
     </div>
-  )
+  );
 }
